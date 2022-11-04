@@ -1,6 +1,8 @@
 import {
   Container,
   Box,
+  Heading,
+  Badge,
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import imgHubSpot from './images/hubspot.png';
@@ -24,19 +26,29 @@ const companyData = {
 
 const Airtable = () => {
 
-  const [company, setCompany] = useState('hubspot');
+  const defaultCompany = window.location.hash.substr(1) || 'hubspot';
+  const [company, setCompany] = useState(defaultCompany);
 
   const { logoUrl, airtableLink, title, url, logoRef } = companyData[company];
+  /*
+        <a target="_blank" href={url}>
+          <img src={logoRef} width="300px"/>
+        </a>
+*/
 
   return (
     <Container>
       <Box>
-        Switcher
+        {Object.entries(companyData).map(([key, cd]) => {
+          return (
+            <a href={`#${key}`} onClick={() => setCompany(key)}>
+              <Badge>{cd.title}
+            </Badge></a>
+          );
+        })}
       </Box>
       <Box>
-        <a target="_blank" href={url}>
-          <img src={logoRef} width="300px"/>
-        </a>
+        <Heading as="h3" size="lg">{title}</Heading>
       </Box>
       <iframe className="airtable-embed" src={airtableLink} frameborder="0" onmousewheel="" width="100%" height="800" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe>
 
