@@ -12,6 +12,7 @@ import {
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
 import Hero from './Hero';
+import Airtable from './Airtable';
 
 const Home = () =>  {
   const isDesktop = useBreakpointValue({
@@ -57,10 +58,7 @@ const Home = () =>  {
       </Box>
       <Divider />
       <Hero />
-      <Container>
-        <iframe className="airtable-embed" src="https://airtable.com/embed/shrHi8a6NsiPXQv00?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="800" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe>
-
-      </Container>
+      <Airtable />
     </Box>
   )
 }
