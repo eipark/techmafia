@@ -38,16 +38,20 @@ const Airtable = () => {
 
   return (
     <Container>
-      <Box>
+      <Box my="8">
         {Object.entries(companyData).map(([key, cd]) => {
           return (
             <a href={`#${key}`} onClick={() => setCompany(key)}>
-              <Badge>{cd.title}
-            </Badge></a>
+              {company == key ? 
+                <Badge colorScheme="green">{cd.title}</Badge>
+                :
+                <Badge>{cd.title}</Badge>
+              }
+          </a>
           );
         })}
       </Box>
-      <Box>
+      <Box my="2">
         <Heading as="h3" size="lg">{title}</Heading>
       </Box>
       <iframe className="airtable-embed" src={airtableLink} frameborder="0" onmousewheel="" width="100%" height="800" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe>
