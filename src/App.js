@@ -11,13 +11,11 @@ import {
 import { theme } from '@chakra-ui/pro-theme';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import Home from './Home';
-import Hero from './Hero';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Home />
-      <Hero />
     </ChakraProvider>
   );
 }
