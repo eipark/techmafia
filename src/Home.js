@@ -13,6 +13,7 @@ import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
 import Hero from './Hero';
 import Airtable from './Airtable';
+import ExactBuyerSrc from './images/exactbuyer.svg';
 
 const Home = () =>  {
   const isDesktop = useBreakpointValue({
@@ -59,6 +60,11 @@ const Home = () =>  {
       <Divider />
       <Hero />
       <Airtable />
+      <Container
+        my="6"
+      >
+        Data powered by: <a href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine"><img src={ExactBuyerSrc} /></a>
+      </Container>
     </Box>
   )
 }
