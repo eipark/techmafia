@@ -42,9 +42,8 @@ const Home = () =>  {
             {isDesktop ? (
               <HStack spacing="10">
                 <ButtonGroup variant="link" spacing="8">
-                  {['Product', 'Pricing', 'Resources', 'Support'].map((item) => (
-                    <Button key={item}>{item}</Button>
-                  ))}
+                  <Button key={'mafia-tracker'}>Mafias</Button>
+                  <Button key={'add-company'}>Add your company</Button>
                 </ButtonGroup>
               </HStack>
             ) : (
