@@ -12,6 +12,7 @@ import {
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
 import Hero from './Hero';
+import Footer from './Footer';
 import Airtable from './Airtable';
 import ExactBuyerSrc from './images/exactbuyer.svg';
 
@@ -64,6 +65,7 @@ const Home = () =>  {
       >
         Data powered by: <a href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine"><img src={ExactBuyerSrc} /></a>
       </Container>
+      <Footer />
     </Box>
   )
 }
