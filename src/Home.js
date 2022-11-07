@@ -8,6 +8,7 @@ import {
   IconButton,
   useBreakpointValue,
   Heading,
+  Link
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
@@ -39,12 +40,12 @@ const Home = () =>  {
       >
         <Container>
           <HStack spacing="10" justify="space-between">
-            <Heading as='h1' size='lg'>Tech Mafia</Heading>
+            <Heading as='h1' size='md'>Tech Mafia</Heading>
             {isDesktop ? (
               <HStack spacing="10">
                 <ButtonGroup variant="link" spacing="8">
-                  <Button key={'mafia-tracker'}>Mafias</Button>
-                  <Button key={'add-company'}>Add your company</Button>
+                  <Button key={'mafia-tracker'}><Link href="#mafias">Mafias</Link></Button>
+                  <Button key={'add-company'}><Link href="#add">Add your company</Link></Button>
                 </ButtonGroup>
               </HStack>
             ) : (

@@ -39,13 +39,14 @@ const Airtable = () => {
   return (
     <Container>
       <Box my="8">
+        Scan for mafias: &nbsp;
         {Object.entries(companyData).map(([key, cd]) => {
           return (
             <a href={`#${key}`} onClick={() => setCompany(key)}>
               {company == key ? 
-                <Badge colorScheme="green">{cd.title}</Badge>
+                <Badge mx="3" fontSize="1em" colorScheme="green">{cd.title}</Badge>
                 :
-                <Badge>{cd.title}</Badge>
+                <Badge mx="3" fontSize="1em">{cd.title}</Badge>
               }
           </a>
           );
