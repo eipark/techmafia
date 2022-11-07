@@ -61,7 +61,10 @@ const Home = () =>  {
       <Divider />
       <Hero />
       <Airtable />
-      <Container>
+      <Container my="12">
+        <Heading as="h4" size="sm" id="add">
+          Incorrect data? Want to see your company here? <br />Let us know 📧 techmafia.io@gmail.com or twitter.
+        </Heading>
       </Container>
       <Footer />
     </Box>

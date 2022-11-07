@@ -26,6 +26,7 @@ const companyData = {
 
 const Airtable = () => {
 
+  // TODO: Switch to query string
   const defaultCompany = window.location.hash.substr(1) || 'hubspot';
   const [company, setCompany] = useState(defaultCompany);
 
@@ -37,7 +38,7 @@ const Airtable = () => {
 */
 
   return (
-    <Container>
+    <Container id="mafias">
       <Box my="8">
         Scan for mafias: &nbsp;
         {Object.entries(companyData).map(([key, cd]) => {

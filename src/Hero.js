@@ -16,15 +16,15 @@ import * as React from 'react'
 const Hero = () => (
   <Container
     py={{
-      base: '16',
-      md: '24',
+      base: '4',
+      md: '8',
     }}
   >
     <Box
       bg="bg-surface"
       py={{
-        base: '10',
-        md: '16',
+        base: '5',
+        md: '10',
       }}
       px="6"
       borderRadius="lg"
@@ -50,7 +50,8 @@ const Hero = () => (
               md: 'md',
             })}
           >
-            Browse the mafias of the top tech companies.
+            Browse the mafias of the top tech companies.<br />
+            See how they stack up.
           </Heading>
           <Text
             fontSize={{
@@ -60,25 +61,6 @@ const Hero = () => (
             color="muted"
           >
           </Text>
-        </Stack>
-        <Stack
-          direction={{
-            base: 'column',
-            md: 'row',
-          }}
-          width="full"
-          maxW={{
-            md: 'lg',
-          }}
-          spacing="4"
-        >
-          <FormControl flex="1">
-            <Input type="email" size="lg" placeholder="Enter your email" />
-            <FormHelperText color="subtle">At most 1 email/week on new companies and other mafia news. No spam, unsubscribe anytime.</FormHelperText>
-          </FormControl>
-          <Button variant="primary" size="lg">
-            Subscribe
-          </Button>
         </Stack>
       </Stack>
         <Stack
