@@ -8,7 +8,8 @@ import {
   IconButton,
   useBreakpointValue,
   Heading,
-  Link
+  Link,
+  Text
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
@@ -63,8 +64,9 @@ const Home = () =>  {
       <Airtable />
       <Container my="12">
         <Heading as="h4" size="sm" id="add">
-          Incorrect data? Want to see your company here? <br />Let us know 📧 techmafia.io@gmail.com or twitter.
+          Incorrect data? Want to see your company here? 
         </Heading>
+        <Text>Let us know 📧 techmafia.io@gmail.com or twitter.</Text>
       </Container>
       <Footer />
     </Box>
