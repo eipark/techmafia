@@ -12,6 +12,7 @@ const Footer = () => (
         base: '12',
         md: '16',
       }}
+      mt="10"
     >
       <Stack
         spacing={{
