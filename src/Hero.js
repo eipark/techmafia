@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Badge,
   Container,
   FormControl,
   FormHelperText,
@@ -72,14 +73,16 @@ const Hero = () => (
 
           <SimpleGrid columns={2} spacing={20}>
             <Box>
-              Data powered by
-              <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine"><img margin="auto" src={ExactBuyerSrc} /></a>
+              <Badge mb="2">Data powered by</Badge>
+              <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine">
+                <img style={{margin:"auto"}} src={ExactBuyerSrc} />
+              </a>
               <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine"><b>ExactBuyer</b></a>: Prospecting, just like Googling
             </Box>
             <Box>
-              Sponsored by
+              <Badge mb="2" >Sponsored by</Badge>
               <a target="_blank" href="https://blog.parttimetech.io?utm_source=mafia" title="Part-Time Tech: The Future of Work isn't just Remote, it's Part-Time">
-                <img margin="auto" width={80} src={PTTSrc} />
+                <img style={{margin: "auto"}} width={80} src={PTTSrc} />
               </a>
               <a target="_blank" href="https://blog.parttimetech.io?utm_source=mafia" title="Part-Time Tech: The Future of Work isn't just Remote, it's Part-Time"><b>Part-Time Tech</b></a>: Unlocking part-time <br />employment in the tech industry.
             </Box>
