@@ -64,7 +64,7 @@ const Home = () =>  {
       <Airtable />
       <Container my="12">
         <Heading as="h4" size="sm" id="add">
-          Incorrect data? Want to see your company here? 
+          Incorrect data? Want to add your company to the list?
         </Heading>
         <Text>Let us know 📧 techmafia.io@gmail.com or twitter.</Text>
       </Container>
