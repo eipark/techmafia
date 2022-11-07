@@ -5,101 +5,109 @@ import {
   FormControl,
   FormHelperText,
   Heading,
-  Image,
   Input,
   Stack,
   Text,
   useBreakpointValue,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import * as React from 'react'
 
 const Hero = () => (
-  <Box bg="bg-surface">
-    <Container
+  <Container
+    py={{
+      base: '16',
+      md: '24',
+    }}
+  >
+    <Box
+      bg="bg-surface"
       py={{
-        base: '16',
-        md: '24',
+        base: '10',
+        md: '16',
       }}
+      px="6"
+      borderRadius="lg"
+      boxShadow={useColorModeValue('sm', 'sm-dark')}
     >
       <Stack
-        spacing="16"
-        direction={{
-          base: 'column',
-          md: 'row',
+        spacing={{
+          base: '8',
+          md: '10',
         }}
-        align={{
-          base: 'start',
-          md: 'center',
-        }}
+        align="center"
       >
         <Stack
           spacing={{
-            base: '8',
-            md: '10',
+            base: '4',
+            md: '5',
           }}
-          width="full"
+          textAlign="center"
         >
-          <Stack
-            spacing={{
-              base: '4',
-              md: '6',
-            }}
+          <Heading
+            size={useBreakpointValue({
+              base: 'sm',
+              md: 'md',
+            })}
           >
-            <Heading
-              size={useBreakpointValue({
-                base: 'sm',
-                md: 'lg',
-              })}
-            >
-              Subsribe to our newsletter
-            </Heading>
-            <Text
-              fontSize={{
-                base: 'lg',
-                md: 'xl',
-              }}
-              color="muted"
-            >
-              We will write you when we have new components released so you can try them first.
-            </Text>
-          </Stack>
-          <Stack
-            direction={{
-              base: 'column',
-              sm: 'row',
+            Browse the mafias of the top tech companies.
+          </Heading>
+          <Text
+            fontSize={{
+              base: 'lg',
+              md: 'xl',
             }}
-            width="full"
-            maxW={{
-              md: 'lg',
-            }}
-            spacing="4"
+            color="muted"
           >
-            <FormControl flex="1">
-              <Input type="email" size="lg" placeholder="Enter your email" />
-              <FormHelperText color="subtle">Read abotu your privacy policy</FormHelperText>
-            </FormControl>
-            <Button variant="primary" size="lg">
-              Subscribe
-            </Button>
-          </Stack>
+          </Text>
         </Stack>
-        <Box
-          width="full"
-          height={{
-            base: 'sm',
-            md: 'md',
+        <Stack
+          direction={{
+            base: 'column',
+            md: 'row',
           }}
+          width="full"
+          maxW={{
+            md: 'lg',
+          }}
+          spacing="4"
         >
-          <Image
-            boxSize="full"
-            alt="Subscribe to newsletter image"
-            src="https://tinyurl.com/2p8nmy9p"
-            objectFit="cover"
-          />
-        </Box>
+          <FormControl flex="1">
+            <Input type="email" size="lg" placeholder="Enter your email" />
+            <FormHelperText color="subtle">At most 1 email/week on new companies and other mafia news. No spam, unsubscribe anytime.</FormHelperText>
+          </FormControl>
+          <Button variant="primary" size="lg">
+            Subscribe
+          </Button>
+        </Stack>
       </Stack>
-    </Container>
-  </Box>
+        <Stack
+          spacing={{
+            base: '4',
+            md: '5',
+          }}
+          textAlign="center"
+        >
+          <Heading
+            size={useBreakpointValue({
+              base: 'sm',
+              md: 'md',
+            })}
+          >
+            Data powered by ExactBuyer.
+            Sponsored by Part-Time Tech.
+          </Heading>
+          <Text
+            fontSize={{
+              base: 'lg',
+              md: 'xl',
+            }}
+            color="muted"
+          >
+          </Text>
+        </Stack>
+    </Box>
+  </Container>
 )
 
 export default Hero;
