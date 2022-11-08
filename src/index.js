@@ -13,7 +13,13 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <App />
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route path=":company" element={<App />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -7,6 +7,10 @@ import {
 import React, { useState } from 'react'
 import imgHubSpot from './images/hubspot.png';
 import imgStripe from './images/stripe.png';
+import {
+  useParams,
+  Link,
+} from "react-router-dom";
 
 
 const companyData = {
@@ -26,9 +30,8 @@ const companyData = {
 
 const Airtable = () => {
 
-  // TODO: Switch to query string
-  const defaultCompany = window.location.hash.substr(1) || 'hubspot';
-  const [company, setCompany] = useState(defaultCompany);
+  let { company } = useParams();
+  company = company || "hubspot";
 
   const { logoUrl, airtableLink, title, url, logoRef } = companyData[company];
   /*
@@ -43,13 +46,13 @@ const Airtable = () => {
         Scan for mafias: &nbsp;
         {Object.entries(companyData).map(([key, cd]) => {
           return (
-            <a href={`#${key}`} onClick={() => setCompany(key)}>
+            <Link to={`/${key}`} key={key}>
               {company == key ? 
                 <Badge mx="3" fontSize="1em" colorScheme="green">{cd.title}</Badge>
                 :
                 <Badge mx="3" fontSize="1em">{cd.title}</Badge>
               }
-          </a>
+          </Link>
           );
         })}
       </Box>
