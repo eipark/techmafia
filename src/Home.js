@@ -9,7 +9,10 @@ import {
   useBreakpointValue,
   Heading,
   Link,
-  Text
+  Text,
+  SimpleGrid,
+  Badge,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
@@ -17,6 +20,7 @@ import Hero from './Hero';
 import Footer from './Footer';
 import Airtable from './Airtable';
 import ExactBuyerSrc from './images/exactbuyer.svg';
+import PTTSrc from './images/ptt.png';
 
 const Home = () =>  {
   const isDesktop = useBreakpointValue({
@@ -62,12 +66,41 @@ const Home = () =>  {
       <Divider />
       <Hero />
       <Airtable />
+
       <Container my="12">
         <Heading as="h4" size="sm" id="add">
           Incorrect data? Want to add your company to the list?
         </Heading>
         <Text>Let us know 📧 techmafia.io@gmail.com or twitter.</Text>
       </Container>
+
+      <Container my="12" textAlign="center">
+        <Box
+          bg="bg-surface"
+          px={{ base: '4', md: '6' }}
+          py="10"
+          boxShadow={useColorModeValue('sm', 'sm-dark')}
+          borderRadius="lg"
+        >
+        <SimpleGrid columns={2} spacing={20}>
+          <Box>
+            <Badge mb="2">Data powered by</Badge>
+            <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine">
+              <img style={{margin:"auto"}} src={ExactBuyerSrc} />
+            </a>
+            <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine"><b>ExactBuyer</b></a>: Prospecting, just like Googling
+          </Box>
+          <Box>
+            <Badge mb="2" >Sponsored by</Badge>
+            <a target="_blank" href="https://blog.parttimetech.io?utm_source=mafia" title="Part-Time Tech: The Future of Work isn't just Remote, it's Part-Time">
+              <img style={{margin: "auto"}} width={80} src={PTTSrc} />
+            </a>
+            <a target="_blank" href="https://blog.parttimetech.io?utm_source=mafia" title="Part-Time Tech: The Future of Work isn't just Remote, it's Part-Time"><b>Part-Time Tech</b></a>: Unlocking part-time <br />employment in the tech industry.
+          </Box>
+        </SimpleGrid>
+        </Box>
+      </Container>
+
       <Footer />
     </Box>
   )

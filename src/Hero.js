@@ -11,13 +11,10 @@ import {
   Text,
   useBreakpointValue,
   useColorModeValue,
-  SimpleGrid,
   Center,
   Divider,
 } from '@chakra-ui/react'
 import * as React from 'react'
-import ExactBuyerSrc from './images/exactbuyer.svg';
-import PTTSrc from './images/ptt.png';
 
 const Hero = () => (
   <Container
@@ -51,9 +48,11 @@ const Hero = () => (
           textAlign="center"
         >
           <Heading
+            bgGradient='linear(to-l, #7928CA, #FF0080)'
+            bgClip="text"
             size={useBreakpointValue({
-              base: 'sm',
-              md: 'md',
+              base: 'lg',
+              md: 'lg',
             })}
           >
             Browse the mafias of the top tech companies.<br />
@@ -69,24 +68,6 @@ const Hero = () => (
             <i>Tech mafia (n): The companies created by former employees of another tech company</i>
           </Text>
 
-          <Divider />
-
-          <SimpleGrid columns={2} spacing={20}>
-            <Box>
-              <Badge mb="2">Data powered by</Badge>
-              <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine">
-                <img style={{margin:"auto"}} src={ExactBuyerSrc} />
-              </a>
-              <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine"><b>ExactBuyer</b></a>: Prospecting, just like Googling
-            </Box>
-            <Box>
-              <Badge mb="2" >Sponsored by</Badge>
-              <a target="_blank" href="https://blog.parttimetech.io?utm_source=mafia" title="Part-Time Tech: The Future of Work isn't just Remote, it's Part-Time">
-                <img style={{margin: "auto"}} width={80} src={PTTSrc} />
-              </a>
-              <a target="_blank" href="https://blog.parttimetech.io?utm_source=mafia" title="Part-Time Tech: The Future of Work isn't just Remote, it's Part-Time"><b>Part-Time Tech</b></a>: Unlocking part-time <br />employment in the tech industry.
-            </Box>
-          </SimpleGrid>
 
         </Stack>
 
