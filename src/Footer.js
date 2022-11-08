@@ -20,7 +20,7 @@ const Footer = () => (
       >
         <Stack justify="space-between" direction="row" align="center">
           <Box>
-            <strong>TechMafia</strong>&nbsp;<br />
+            <strong>Tech Mafia</strong>&nbsp;<br />
             Created by <a href="linkedin.com/in/ernestipark">Ernie Park</a> &middot;&nbsp;
             <a href="twitter.com/eipark">@eipark</a>
           </Box>
