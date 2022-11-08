@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import {
+  ColorModeScript,
   ChakraProvider,
   Box,
   Text,
@@ -15,10 +16,13 @@ import EmailBanner from './EmailBanner';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <EmailBanner />
-      <Home />
-    </ChakraProvider>
+    <StrictMode>
+      <ColorModeScript />
+      <ChakraProvider theme={theme}>
+        <EmailBanner />
+        <Home />
+      </ChakraProvider>
+    </StrictMode>
   );
 }
 
