@@ -13,14 +13,42 @@ import {
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { FiMail } from 'react-icons/fi'
+import ReactDOM from "react-dom";
+import { useFormspark } from "@formspark/use-formspark";
+
+const FORMSPARK_FORM_ID = "I0FGWqfD";
+const LOCAL_STORAGE_KEY = "hideBanner";
 
 const EmailBanner = () => {
-  const [display, setDisplay] = useState(true);
+
+  const [submit, submitting] = useFormspark({
+    formId: FORMSPARK_FORM_ID,
+  });
+  const [email, setEmail] = useState("");
+  const bannerDefault = localStorage.getItem(LOCAL_STORAGE_KEY) !== null;
+
+  const [hideBanner, setHideBanner] = useState(bannerDefault);
+
+  const closeBanner = () => {
+    debugger
+    setHideBanner(true);
+    localStorage.setItem(LOCAL_STORAGE_KEY, 'true');
+  };
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    closeBanner();
+    await submit({ email });
+    alert("Thanks! You've been added to our email list.");
+  };
+
+
+
   const isMobile = useBreakpointValue({
     base: true,
     md: false,
   })
-  if (!display) return;
+  if (hideBanner) return;
+
   return (
     <Box
       as="section"
@@ -38,7 +66,7 @@ const EmailBanner = () => {
           position="relative"
         >
           <CloseButton
-            onClick={() => {setDisplay(false)}}
+            onClick={closeBanner}
             display={{
               md: 'none',
             }}
@@ -88,7 +116,7 @@ const EmailBanner = () => {
             </Stack>
             <Stack
               as="form"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={onSubmit}
               direction={{
                 base: 'column',
                 sm: 'row',
@@ -107,6 +135,8 @@ const EmailBanner = () => {
                   placeholder="Enter your email"
                   type="email"
                   isRequired
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   variant="outline-on-accent"
                 />
               </LightMode>
@@ -114,7 +144,7 @@ const EmailBanner = () => {
                 Subscribe
               </Button>
               <CloseButton
-                onClick={() => {setDisplay(false)}}
+                onClick={closeBanner}
                 display={{
                   base: 'none',
                   md: 'inline-flex',
