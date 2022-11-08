@@ -30,10 +30,6 @@ const Home = () =>  {
   return (
     <Box
       as="section"
-      pb={{
-        base: '12',
-        md: '24',
-      }}
     >
       <Box
         as="nav"
@@ -82,7 +78,7 @@ const Home = () =>  {
           boxShadow={useColorModeValue('sm', 'sm-dark')}
           borderRadius="lg"
         >
-        <SimpleGrid columns={2} spacing={20}>
+        <SimpleGrid columns={2} spacing={30}>
           <Box>
             <Badge mb="2">Data powered by</Badge>
             <a target="_blank" href="https://exactbuyer.com?utm_source=mafia" title="ExactBuyer: AI-powered business search engine">
