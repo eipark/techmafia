@@ -33,7 +33,7 @@ const Footer = () => (
             />
             <IconButton
               as="a"
-              href="twitter.com/eipark"
+              href="twitter.com/techmafia_io"
               aria-label="Twitter"
               icon={<FaTwitter fontSize="1.25rem" />}
             />

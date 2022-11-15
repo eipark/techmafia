@@ -28,6 +28,8 @@ const companyData = {
   },
 };
 
+const TWITTER_LINK = "https://twitter.com/intent/tweet?text=Hey%20%40techmafia_io%20you%20should%20add%20%7BCOMPANY%20HERE%7D%20to%20techmafia.io!";
+
 const Airtable = () => {
 
     let { company } = useParams();
@@ -47,7 +49,7 @@ const Airtable = () => {
         {Object.entries(companyData).map(([key, cd]) => {
           return (
             <Link to={`/${key}`} key={key}>
-              {company == key ? 
+              {company == key ?
                 <Badge mx="3" fontSize="1em" colorScheme="green">{cd.title}</Badge>
                 :
                 <Badge mx="3" fontSize="1em">{cd.title}</Badge>
@@ -55,6 +57,7 @@ const Airtable = () => {
           </Link>
           );
         })}
+          <a target="_blank" href={TWITTER_LINK}><Badge mx="3" fontSize="1em">+ Add a company</Badge></a>
       </Box>
       <Box my="2">
         <Heading as="h3" size="lg">{title}</Heading>
