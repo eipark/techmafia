@@ -21,7 +21,7 @@ const companyData = {
     logoRef: imgHubSpot,
   },
   'stripe': {
-    airtableLink: "https://airtable.com/embed/shrHi8a6NsiPXQv00?backgroundColor=blue&viewControls=on",
+    airtableLink: "https://airtable.com/embed/shr1aENlN1eJBRzHN?backgroundColor=blue&viewControls=on",
     title: 'Stripe',
     url: 'https://stripe.com',
     logoRef: imgStripe,
@@ -30,7 +30,7 @@ const companyData = {
 
 const Airtable = () => {
 
-  let { company } = useParams();
+    let { company } = useParams();
   company = company || "hubspot";
 
   const { logoUrl, airtableLink, title, url, logoRef } = companyData[company];
