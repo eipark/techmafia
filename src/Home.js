@@ -42,6 +42,7 @@ const Home = () =>  {
         <Container>
           <HStack spacing="10" justify="space-between">
             <Heading as='h1' size='md'>🕵️‍♀️&nbsp; Tech Mafia</Heading>
+            {/*
             {isDesktop ? (
               <HStack spacing="10">
                 <ButtonGroup variant="link" spacing="8">
@@ -56,6 +57,7 @@ const Home = () =>  {
                 aria-label="Open Menu"
               />
             )}
+            */}
           </HStack>
         </Container>
       </Box>
