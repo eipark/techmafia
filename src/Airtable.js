@@ -15,6 +15,12 @@ import {
 
 
 const companyData = {
+  'paypal': {
+    airtableLink: "https://airtable.com/embed/shrP2mfje3Eedn4Ti?backgroundColor=blue&viewControls=on",
+    title: 'PayPal',
+    url: 'https://paypal.com',
+    logoRef: imgHubSpot, //TODO: Change if we use images
+  },
   'hubspot': {
     airtableLink: "https://airtable.com/embed/shrHi8a6NsiPXQv00?backgroundColor=blue&viewControls=on",
     title: 'HubSpot',
@@ -22,7 +28,7 @@ const companyData = {
     logoRef: imgHubSpot,
   },
   'stripe': {
-    airtableLink: "https://airtable.com/embed/shr1aENlN1eJBRzHN?backgroundColor=blue&viewControls=on",
+    airtableLink: "https://airtable.com/embed/shrAu6uhN5Ioe97ti?backgroundColor=blue&viewControls=on",
     title: 'Stripe',
     url: 'https://stripe.com',
     logoRef: imgStripe,
@@ -33,8 +39,8 @@ const TWITTER_LINK = "https://twitter.com/intent/tweet?text=Hey%20%40techmafia_i
 
 const Airtable = () => {
 
-    let { company } = useParams();
-  company = company || "hubspot";
+  let { company } = useParams();
+  company = company || "paypal";
 
   const { logoUrl, airtableLink, title, url, logoRef } = companyData[company];
   /*
