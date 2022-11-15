@@ -3,6 +3,7 @@ import {
   Box,
   Heading,
   Badge,
+  Text,
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import imgHubSpot from './images/hubspot.png';
@@ -64,6 +65,7 @@ const Airtable = () => {
       </Box>
       <iframe className="airtable-embed" src={airtableLink} frameborder="0" onmousewheel="" width="100%" height="800" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe>
 
+      <Text my="4" size="xs">Note: We only include companies that have been venture funded or have public valuation information. </Text>
     </Container>
   );
 };
