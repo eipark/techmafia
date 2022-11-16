@@ -65,7 +65,7 @@ const Hero = () => (
             }}
             color="muted"
           >
-            <i>Tech mafia (n): The ex-employees of a tech company who go on to start other companies</i>
+            <i>Tech mafia (n): The alumni of a tech company who go on to start other companies</i>
           </Text>
 
 
