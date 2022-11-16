@@ -55,7 +55,7 @@ const Hero = () => (
               md: 'lg',
             })}
           >
-            Browse the mafias of top tech companies.<br />
+            Discover the mafias of top tech companies.<br />
             See how they stack up.
           </Heading>
           <Text
