@@ -69,7 +69,7 @@ const Home = () =>  {
         <Heading as="h4" size="sm" id="add">
           Want to add your company to the list? Incorrect data?
         </Heading>
-        <Text>Let us know  📧 <a href="mailto:techmafia.io@gmail.com">techmafia.io@gmail.com</a> or 🐦 <a href="twitter.com/techmafia_io">@techmafia_io</a>.</Text>
+        <Text>Let us know  📧 <a href="mailto:techmafia.io@gmail.com">techmafia.io@gmail.com</a> or 🐦 <a href="https://twitter.com/techmafia_io">@techmafia_io</a>.</Text>
       </Container>
 
       <Container my="12" textAlign="center">

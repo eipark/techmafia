@@ -21,8 +21,8 @@ const Footer = () => (
         <Stack justify="space-between" direction="row" align="center">
           <Box>
             <strong>Tech Mafia</strong>&nbsp;<br />
-            Created by <a href="linkedin.com/in/ernestipark">Ernie Park</a> &middot;&nbsp;
-            <a href="twitter.com/eipark">@eipark</a>
+            Created by <a href="https://linkedin.com/in/ernestipark">Ernie Park</a> &middot;&nbsp;
+            <a href="https://twitter.com/eipark">@eipark</a>
           </Box>
           <ButtonGroup variant="ghost-on-accent">
             <IconButton
@@ -33,7 +33,7 @@ const Footer = () => (
             />
             <IconButton
               as="a"
-              href="twitter.com/techmafia_io"
+              href="https://twitter.com/techmafia_io"
               aria-label="Twitter"
               icon={<FaTwitter fontSize="1.25rem" />}
             />
